@@ -1,0 +1,17 @@
+[Unit]
+Description=rfm-to-ssb bridge on %I network
+After=sbot@%i.service rfm@0.1.service
+
+[Service]
+User=regular
+Group=regular
+Environment="ssb_appname=%i"
+Environment="nodebin=/home/regular/.nvm/versions/node/v8.11.3/bin"
+ExecStart=/usr/bin/bash -xc '${nodebin}/node ${nodebin}/rfm-ssb-bridge'
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

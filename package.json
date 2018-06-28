@@ -1,0 +1,23 @@
+{
+  "name": "rfm-ssb-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "rfm-ssb-bridge": "bin.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mdmanifest": "^1.0.8",
+    "muxrpc": "^7.0.1",
+    "muxrpcli": "^1.1.0",
+    "pull-net": "^1.0.2",
+    "pull-stream": "^3.6.8",
+    "ssb-client": "^4.5.7"
+  }
+}
